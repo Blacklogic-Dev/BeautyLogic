@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | Beauty Logic</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #4A90E2, #FF5FA2);
+      color: white;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      overflow-x: auto;
+      gap: 25px;
+      padding: 10px 0;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      margin-bottom: 30px;
+      backdrop-filter: blur(5px);
+    }
+
+    nav a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a i {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    /* Grid Container */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .about-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 20px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 3px solid white;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+    }
+
+    /* Feedback Button */
+    .feedback-btn {
+      background: white;
+      color: #4A90E2;
+      padding: 15px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      margin: 40px auto 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+      transition: 0.3s;
+    }
+
+    .feedback-btn:hover {
+      background: #FF5FA2;
+      color: white;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+    <!-- Navigation -->
+  <nav>
+    <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="store.html"><i class="fas fa-store"></i><span>Store</span></a>
+    <a href="tracking.html"><i class="fas fa-shopping-cart"></i><span>Track</span></a>
+    <a href="about.html"><i class="fas fa-user"></i><span>About</span></a>
+    <a href="analysis.html"><i class="fas fa-chart-line"></i><span>Analytics</span></a>
+  </nav>
+
+  <!-- About Grids -->
+  <div class="about-grid">
+
+    <!-- Grid 1: BlackLogic -->
+    <div class="card">
+      <img src="Mi.jpg" alt="BlackLogic" />
+      <h3>BlackLogic</h3>
+      <p>Founder & Lead Developer of Beauty Logic. Visionary coder blending AI,ML & Software  Engineering to transform digital beauty solutions.</p>
+    </div>
+
+    <!-- Grid 2: Asanda Mfusi -->
+    <div class="card">
+      <img src="Babe3.jpg" alt="Asanda Mfusi" />
+      <h3>Asanda Mfusi</h3>
+      <p>Head of Management & Finance. Driving operational growth and financial strategy at Beauty Logic with brilliance and precision.</p>
+    </div>
+
+    <!-- Grid 3: Vision -->
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/744/744466.png" alt="Vision Icon" />
+      <h3>Our Vision</h3>
+      <p>We aim to empower beauty brands through smart technology, enhance customer experiences, and redefine digital innovation in beauty and beyond.</p>
+    </div>
+  </div>
+
+  <!-- Feedback Button -->
+  <button class="feedback-btn">
+    <i class="fas fa-comment-dots"></i> Send Feedback
+  </button>
+
+</body>
+</html>

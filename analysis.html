@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analytics | Beauty Logic</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #4A90E2, #FF5FA2);
+      color: white;
+      padding: 20px;
+      min-height: 100vh;
+    }nav {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  justify-content: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  margin-bottom: 40px;
+  backdrop-filter: blur(5px);
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+nav a i {
+  display: block;
+  font-size: 20px;
+}
+
+.analytics-container {
+  max-width: 1000px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+canvas {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="store.html"><i class="fas fa-store"></i><span>Store</span></a>
+    <a href="tracking.html"><i class="fas fa-shopping-cart"></i><span>Track</span></a>
+    <a href="about.html"><i class="fas fa-user"></i><span>About</span></a>
+    <a href="analysis.html"><i class="fas fa-chart-line"></i><span>Analytics</span></a>
+  </nav>
+  </nav>  <!-- Analytics Content -->  <div class="analytics-container">
+    <h2><i class="fas fa-chart-pie"></i> Sales Analytics</h2><canvas id="salesChart" width="400" height="200"></canvas>
+<canvas id="behaviorChart" width="400" height="200"></canvas>
+
+  </div>  <script>
+    const ctx1 = document.getElementById('salesChart').getContext('2d');
+    const salesChart = new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Product Sold',
+          data: [20000, 300000, 450000, 650000, 800000, 1200000],
+          backgroundColor: '#FF5FA2'
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 1300000
+          }
+        }
+      }
+    });
+
+    const ctx2 = document.getElementById('behaviorChart').getContext('2d');
+    const behaviorChart = new Chart(ctx2, {
+      type: 'line',
+      data: {
+        labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+        datasets: [{
+          label: 'User Behavior (Page Visits)',
+          data: [500, 1200, 900, 1600],
+          fill: false,
+          borderColor: 'white',
+          tension: 0.3
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script></body>
+</html>
